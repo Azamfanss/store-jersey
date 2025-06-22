@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: wheat;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+}
+
+.icon-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.icon-toggle .material-icons {
+    font-size: 28px;
+    color: white
+}
+
+/* style hero content */
+
+.hero {
+    background-image: url("pngtree-an-image-of-a-clothing-store-image_2519172.jpg"); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 0 20px;
+}
+.hero::before {
+    content:"" ;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0, 0.5);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+.btn {
+    background-color: #38bdf8;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0ea5e9;
+}
+
+/* style about  */
+
+.about {
+  background-color: #f9fafb; /* soft light background */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #0f172a; /* slate-900 */
+  margin-bottom: 24px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #475569; /* slate-600 */
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* style card product */
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+}
+
+.price {
+    font-size: 14px;
+    color: #666;
+}
+
+.buy-btn {
+    margin-top: 10px;
+    padding: 8px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.buy-btn:hover {
+    background: hsl(210, 79%, 46%);
+}
+.product-section .product-container{
+    text-align: center;
+}
+.product-container h2{
+    font-size: 2rem;
+    color: #0f172a; /* slate-900 */
+    margin-bottom: 24px;
+}
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        transition: all 0.3s ease;
+        padding: 10px;
+        z-index: 10;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .icon-toggle {
+        display: block;
+    }
+}
+
